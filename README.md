@@ -1,2 +1,2 @@
-# shipped-buildpack-template-golang
+# shipped-buildpack-template-go
 Go - Template Buildpack
