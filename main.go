@@ -19,7 +19,9 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 			count = count+1
 		}
 		time.Sleep(1*time.Second)
-		
+		if time1 > 50 {
+			break;
+		}
 		time1 = time.Now().Second()
 	}
 }
