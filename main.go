@@ -10,12 +10,12 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "<h1>Hello from Cisco Shipped!</h1>\n")
 	fmt.Fprintf(w, "<h1>Hello from Sheikh! --- Published N Build form Dockerfile</h1>\n")
 	time1 := time.Now().Second()
-	fmt.Fprintf(w,"---Timer Started---\n")
+	fmt.Fprintf(w,"<div>---Timer Started---</div>\n")
 	count := 1
 	for time1 <=  time.Now().Second(){
-		fmt.Fprintf(w,string(time1),"\n")
+		fmt.Fprintf(w,"<div>",string(time1),"</div>\n")
 		if time1 == 59 {
-			fmt.Fprintf(w,"***- ",string(count)," Min. -***\n")
+			fmt.Fprintf(w,"<div>***- ",string(count)," Min. -***</div>\n")
 			count = count+1
 		}
 		time.Sleep(1*time.Second)
