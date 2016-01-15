@@ -13,9 +13,9 @@ func defaultHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w,"<div>---Timer Started---</div>\n")
 	count := 1
 	for time1 <=  time.Now().Second(){
-		fmt.Fprintf(w,"<div>",string(time1),"</div>\n")
+		fmt.Println(w,time1)
 		if time1 == 59 {
-			fmt.Fprintf(w,"<div>***- ",string(count)," Min. -***</div>\n")
+			fmt.Println(w,"***- ",count," Min. -***\n")
 			count = count+1
 		}
 		time.Sleep(1*time.Second)
